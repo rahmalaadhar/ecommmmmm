@@ -72,7 +72,7 @@ export const articleSlice = createSlice({
         state.error=action.payload;
         console.log("impossible de se connecter au serveur")
         })
-        //Paginate
+        //Pagination
     .addCase(getArticlesPagination.pending, (state, action) => {
     state.isLoading=true;
     state.error=null;
