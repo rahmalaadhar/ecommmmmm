@@ -43,6 +43,9 @@ const handleAddToCart = useCallback((product) => {
         try {
         const stripe = await loadStripe('pk_test_51PpVpZI0TSm0DGMxdT73pV3Fq24MOfPa6VNtYfLy75Qtb0PLLIiHQ2nMHCl7QMaEG2ebiYFY6zMQ6OSuH3r9PcHd00DSgwyP7A');
         if (!stripe) throw new Error('Stripe failed to initialize.');
+
+
+        
 const cartItems=cart.cartItems
  const checkoutResponse = await Api.post('payment', {cartItems})
  const {sessionId} = await checkoutResponse.data;
